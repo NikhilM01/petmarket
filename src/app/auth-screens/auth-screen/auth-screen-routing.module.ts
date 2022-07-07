@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: AuthScreenPage
+  },
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'log-in',
+    loadChildren: () => import('./log-in/log-in.module').then( m => m.LogInPageModule)
   }
 ];
 
